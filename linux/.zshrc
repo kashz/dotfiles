@@ -86,4 +86,4 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 
 
 
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
+[ -f ~/.zshrc.linux ] && source ~/.zshrc.linux
