@@ -1,4 +1,10 @@
-" vim settings
+"                                                     
+"             _|                                      
+" _|      _|      _|_|_|  _|_|    _|  _|_|    _|_|_|  
+" _|      _|  _|  _|    _|    _|  _|_|      _|        
+"   _|  _|    _|  _|    _|    _|  _|        _|        
+"     _|      _|  _|    _|    _|  _|          _|_|_|  
+"                                                     
 " Auther: kash
 
 " Basic Settings
@@ -62,7 +68,8 @@ set ignorecase		"case-sensitivity
 set smartcase		"case-sensitivity when mixed lower and upper
 set wrapscan		"検索終了時に最初に戻る
 set hlsearch		"enable highlight when search
-
+set history=100		"コマンドや検索パターンを100個まで残す
+set noincsearch		"インクリメンタルサーチを使わない
 
 "copy & cut
 set clipboard=unnamed,unnamedplus
@@ -74,15 +81,18 @@ set wildmenu
 
 
 " color
+set background=dark	"dark or light
+set t_Co=256
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid  "lucius  hybrid molokai
 syntax on			"コード色分け
 set cursorline
-"highlight CursorLine term=nore cterm=nore ctermfg=black ctermbg=grey
-"
 
 " other
+let s:dirpath = $HOME . '/dotfiles/common'
 set mouse=a
 set nostartofline	"ページアップ・ダウン時にカーソル位置を動かさない
 set autoread		"外部でファイルに変更がされた場合は読みなおす
 set hidden			"保存されていないファイルが有るときでも別のファイルを開くことができる
-
+autocmd BufRead,BufNewFile *.md set filetype=markdown
 set pumheight=5		"補完メニューのポップアップの高さ
