@@ -71,7 +71,7 @@ case ${UID} in
 	;;
 *)
 	# root User
-	PROMPT="%F{red}%B%U[%n]%u%b%f %# "
+	PROMPT="%F{red}%B%U[%n@%D{%m/%d %T}]%u%b%f %# "
 	PROMPT2="%{${fg[red]}%}%_> %{${reset_color}%}"
 	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
