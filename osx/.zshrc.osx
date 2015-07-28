@@ -66,10 +66,10 @@ case ${UID} in
 	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
 	[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-		PRONPT="%F{magenta}%B%D{%m/%d %T}%b%f
+		PROMPT="%F{magenta}%B%D{%m/%d %T}%b%f
 		%F{red}[%n@%m]%f %# "
 	;;
-	
+
 *)
 	# Normal User
 	PROMPT="%F{cyan}[%n@%D{%m/%d %T}]%f %# "
@@ -77,7 +77,7 @@ case ${UID} in
 	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
 	[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-		PRONPT="%F{blue}%B%D{%m/%d %T}%b%f
+		PROMPT="%F{blue}%B%D{%m/%d %T}%b%f
 		%F{cyan}[%n@%m]%f %# "
 	;;
 
