@@ -70,8 +70,8 @@ case ${UID} in
 	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
 	[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-		PROMPT="%F{magenta}%B%D{%m/%d %T}%b%f
-		%F{red}[%n@%m]%f %# "
+		PROMPT="%F{magenta}%B%D{%m/%d %T} [%!/%?]%b%f
+%F{red}[%n@%m]%f %# "
 	;;
 
 *)
@@ -81,8 +81,8 @@ case ${UID} in
 	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
 	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
 	[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-		PROMPT="%F{blue}%B%D{%m/%d %T}%b%f
-		%F{cyan}[%n@%m]%f %# "
+		PROMPT="%F{blue}%B%D{%m/%d %T}  [%!/%?]%b%f
+%F{cyan}[%n@%m]%f %# "
 	;;
 
 esac
