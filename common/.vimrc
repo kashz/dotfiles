@@ -83,14 +83,14 @@ set wildmenu
 " color
 set background=dark	"dark or light
 set t_Co=256
-let g:hybrid_use_Xresources = 1
+let g:hybrid_use_Xresources = 1		" linuxのときに有効
 colorscheme hybrid  "lucius  hybrid molokai
 syntax on			"コード色分け
 set cursorline
 
 " other
-let s:dirpath = $HOME . '/dotfiles/common'
 set mouse=a
+set ttymouse=xterm2
 set nostartofline	"ページアップ・ダウン時にカーソル位置を動かさない
 set autoread		"外部でファイルに変更がされた場合は読みなおす
 set hidden			"保存されていないファイルが有るときでも別のファイルを開くことができる
