@@ -1,6 +1,17 @@
+#
+#                    _|
+#_|_|_|_|    _|_|_|  _|_|_|    _|  _|_|    _|_|_|
+#    _|    _|_|      _|    _|  _|_|      _|
+#  _|          _|_|  _|    _|  _|        _|
+#_|_|_|_|  _|_|_|    _|    _|  _|          _|_|_|
+#
+# Auther: kash
+#
+
 ####################
 # General Settings #
 ####################
+
 # 文字コードをUTF-8に設定
 export LANG=ja_JP.UTF-8
 # エディタをvimに設定
@@ -28,38 +39,10 @@ setopt notify
 setopt extended_glob
 
 
-####################
-# History Settings #
-####################a
-export HISTFILE=${HOME}/.zsh_history
-export HISTSIZE=10000
-export SAVEHIST=10000
-# ヒストリに実行時間も保存する
-setopt extended_history
-# 余分なスペースを削除してヒストリに保存する
-setopt hist_reduce_blanks
-# マッチしたコマンドのヒストリを表示できるようにする
-autoload history-search-end
-zle -N history-beginning-search-backward-end history-search-end
-zle -N history-beginning-search-forward-end history-search-end
-bindkey "^P" history-beginning-search-backward-end
-bindkey "^N" history-beginning-search-forward-end
-# すべてのヒストリを表示する
-function history-all { history -E 1 }
-# 他のシェルとヒストリをリアルタイムで共有する
-setopt share_history
-# !を使ったヒストリ展開を行う
-setopt bang_hist
-# 直前と同じコマンドはヒストリに追加しない
-setopt hist_ignore_dups
-# historyコマンドは登録しない
-setopt hist_no_store
-# 先頭にspaceがあれば登録しない
-
-
 #######################
 # Complement Settings #
 #######################
+
 # 自動補完を有効にする
 autoload -Uz compinit
 compinit
@@ -69,6 +52,8 @@ setopt auto_list
 setopt auto_menu
 # 補完候補を出来るだけ詰めて表示する
 setopt list_packed
+#ディレクトリ名でcd
+setopt auto_cd
 # 補完候補にファイルの種類を表示する
 setopt list_types
 # カッコの対応などを自動的に補完
@@ -83,7 +68,16 @@ setopt complete_aliases
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 # ../の後は今いるディレクトリを補完しない
 zstyle ':completion:*' ignore-parents parent pwd ..
+# sudo の後ろでコマンド名を補完する
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin
+
+# cdコマンド実行後、lsを実行する
+#function cd() {
+#   builtin cd $@ && ls --color;
+#}
 
 
-
-[ -f ~/.zshrc.linux ] && source ~/.zshrc.linux
+[ -f ~/.zshrc.history ] && source ~/.zshrc.history
+[ -f ~/.zshrc.color ] && source ~/.zshrc.color
+[ -f ~/.zshrc.prompt ] && source ~/.zshrc.prompt
+[ -f ~/.zshrc.alias ] && source ~/.zshrc.alias

@@ -1,0 +1,30 @@
+##################
+# Alias Settings #
+##################
+
+alias ll="ls -l"
+alias la="ls -a"
+alias l="ls -al"
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias history="history -E"
+
+case "${OSTYPE}" in
+# Mac(Unix)
+darwin*)
+	alias ls="ls -G -2"
+	alias -s html="google-chrome"
+	;;
+# Linux
+linux*)
+	alias ls="ls --color"
+	;;
+esac
+
+alias -s txt="cat"
+alias -s rb="ruby"
+alias -s py="python"
+# alias -s php="php -f"
