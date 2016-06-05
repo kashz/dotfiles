@@ -15,7 +15,7 @@ alias history="history -E"
 case "${OSTYPE}" in
 # Mac(Unix)
 darwin*)
-	alias ls="ls -G -2"
+	alias ls="ls -G"
 	alias -s html="google-chrome"
 	;;
 # Linux
