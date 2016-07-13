@@ -28,3 +28,7 @@ alias -s txt="cat"
 alias -s rb="ruby"
 alias -s py="python"
 # alias -s php="php -f"
+
+
+# disable correct for a command.
+alias gulp="nocorrect gulp"
