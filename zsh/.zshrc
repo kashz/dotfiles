@@ -77,7 +77,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 #}
 
 
-[ -f ~/.zshrc.history ] && source ~/.zshrc.history
-[ -f ~/.zshrc.color ] && source ~/.zshrc.color
-[ -f ~/.zshrc.prompt ] && source ~/.zshrc.prompt
-[ -f ~/.zshrc.alias ] && source ~/.zshrc.alias
+[ -f ~/dotfiles/zsh/.zshrc.history ] && source ~/dotfiles/zsh/.zshrc.history
+[ -f ~/dotfiles/zsh/.zshrc.color   ] && source ~/dotfiles/zsh/.zshrc.color
+[ -f ~/dotfiles/zsh/.zshrc.prompt  ] && source ~/dotfiles/zsh/.zshrc.prompt
+[ -f ~/dotfiles/zsh/.zshrc.alias   ] && source ~/dotfiles/zsh/.zshrc.alias
