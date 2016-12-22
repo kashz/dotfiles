@@ -16,7 +16,6 @@ case "${OSTYPE}" in
 # Mac(Unix)
 darwin*)
 	alias ls="ls -G"
-	alias -s html="google-chrome"
 	;;
 # Linux
 linux*)
