@@ -2,27 +2,28 @@
 # Prompt Settings #
 ###################
 
+autoload -Uz vcs_info
+setopt prompt_subst
+
+precmd() { vcs_info }
+
 case ${UID} in
 0)
 	# root User
-	PROMPT="%F{red}%B%U[%n@%D{%m/%d %T}]%u%b%f %# "
-	PROMPT2="%{${fg[red]}%}%_> %{${reset_color}%}"
-	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
-	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
-	[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-		PROMPT="%F{magenta}%B%D{%m/%d %T} [%!]%b%f
-%F{red}[%n@%m]%f %# "
-	;;
+	PROMPT="%F{red}%B%U%n%u %# %b%f"
+	PROMPT2="%F{red}%B%_ > %b%f}"
+	RPROMPT="%F{magenta}[%~]%f"
+	SPROMPT="%F{magenta}%r is correct? [y, n, a, e]: %f"
+  ;;
 
 *)
 	# Normal User
-	PROMPT="%F{cyan}[%n@%D{%m/%d %T}]%f %# "
-	PROMPT2="%{${fg[cyan]}%}%_> %{${reset_color}%}"
-	RPROMPT="%{${fg[green]}%}[%~]%{${reset_color}%}"
-	SPROMPT="%{${fg[yellow]}%}%r is correct? [y, n, a, e]:%{${reset_color}%}"
+	PROMPT="%F{green}%# %f"
+	PROMPT2="%F{green}%B%_ > %b%f"
+	RPROMPT="%F{magenta}[%~]%f"
+	SPROMPT="%F{yellow}%r is correct? [y, n, a, e]: %f"
 	[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
-		PROMPT="%F{blue}%B%D{%m/%d %T} [%!]%b%f
-%F{cyan}[%n@%m]%f %# "
+		PROMPT="%F{green}%n@%m %# %f"
 	;;
 
 esac
