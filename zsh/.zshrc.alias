@@ -8,6 +8,7 @@ alias l="ls -al"
 alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
+alias g="git"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias history="history -E"
@@ -26,7 +27,6 @@ esac
 alias -s txt="cat"
 alias -s rb="ruby"
 alias -s py="python"
-# alias -s php="php -f"
 
 
 # disable correct for a command.
