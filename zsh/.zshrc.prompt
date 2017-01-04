@@ -2,10 +2,6 @@
 # Prompt Settings #
 ###################
 
-autoload -Uz vcs_info
-setopt prompt_subst
-
-precmd() { vcs_info }
 
 case ${UID} in
 0)
