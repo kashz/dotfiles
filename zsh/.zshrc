@@ -76,6 +76,7 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/s
 #   builtin cd $@ && ls --color;
 #}
 
+disable r
 
 [ -f ~/dotfiles/zsh/.zshrc.history ] && source ~/dotfiles/zsh/.zshrc.history
 [ -f ~/dotfiles/zsh/.zshrc.color   ] && source ~/dotfiles/zsh/.zshrc.color
