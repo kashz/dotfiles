@@ -5,13 +5,16 @@
 alias ll="ls -l"
 alias la="ls -a"
 alias l="ls -al"
-alias rm="rm -i"
+alias rm="trash"
 alias cp="cp -i"
 alias mv="mv -i"
 alias g="git"
+alias c="code"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias history="history -E"
+alias re="exec $SHELL -l"
+alias icd="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 
 case "${OSTYPE}" in
 # Mac(Unix)
