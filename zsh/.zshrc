@@ -71,6 +71,8 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 # sudo の後ろでコマンド名を補完する
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin
 
+setopt nonomatch
+
 # cdコマンド実行後、lsを実行する
 #function cd() {
 #   builtin cd $@ && ls --color;
